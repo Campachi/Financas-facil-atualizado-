@@ -1,0 +1,260 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Reset de estilos e definição da fonte */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: #ffffff; /* Cor de fundo neutra */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333; /* Cor do texto mais escura para melhor legibilidade */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    border-bottom: 10px solid #000000; /* Adiciona borda preta na parte inferior do cabeçalho */
+    padding: 10px 0; /* Reduzido para um espaço interno menor */
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    padding: 5px 20px; /* Reduzido para um espaço interno menor */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo do width */
+}
+
+
+.logotip {
+    width: 150px;
+    height: 150px; /* Mantém a proporção da imagem */
+    margin-top: 2%;
+}
+ .tit_senha
+ {
+   margin-right: 10%;
+    
+ }
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-left: 25%; /* Alinha à direita */
+    margin-top: 7%;
+}
+
+.nav-links li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0;
+}
+
+.nav-links a {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333333; /* Cor escura ao passar o mouse */
+}
+
+/* Estilos para o dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000; /* Cor de fundo para o conteúdo dropdown */
+    box-shadow: 0px 8px 16px rgb(0, 238, 255);
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ffffff; /* Cor dos itens do dropdown */
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #000000;
+    color: #0ffffb;
+}
+
+/* Estilo do campo de busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 7%;
+    margin-right: 2%;
+}
+
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #1c86ee;
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #000000;
+    color: rgb(0, 247, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Estilo do título principal */
+.main-content h1 {
+    font-size: 48px;
+    color: #333333;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+/* Estilos para a imagem de perfil */
+.profile-avatar {
+    width: 150px;          /* Largura da imagem */
+    height: 150px;         /* Altura da imagem */
+    border-radius: 50%;    /* Borda arredondada */
+    object-fit: cover;     /* Ajusta a imagem para cobrir o espaço */
+    border: 2px solid #2a9fff; /* Borda opcional com a cor do cabeçalho */
+}
+
+/* Estilos para rodapé */
+footer {
+    background-color: #2a9fff;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-top: 5px solid #000000;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para a tabela de perfil */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border-radius: 10px; /* Adiciona border-radius à tabela */
+    overflow: hidden; /* Garante que os cantos arredondados sejam aplicados corretamente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave para profundidade */
+}
+
+.profile-table th,
+.profile-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    /* border-radius: 8px;  Removido para evitar sobreposição de bordas */
+}
+
+.profile-table th {
+    background-color: #f2f2f2;
+    width: 30%;
+    font-weight: bold;
+}
+
+.profile-table tr:nth-child(even) td {
+    background-color: #d0ebff; /* Tom de azul claro para linhas pares */
+}
+
+.profile-table tr:nth-child(odd) td {
+    background-color: #e6f7ff; /* Tom de azul ainda mais claro para linhas ímpares */
+}
+
+.profile-table input[type="text"],
+.profile-table input[type="email"],
+.profile-table input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.fundo-dados {
+    background-color: #1c86ee;
+}
+
+.update-button {
+    background-color: #2a9fff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.update-button:hover {
+    background-color: #1c86ee;
+}
+
+.message {
+    margin-top: 15px;
+    font-size: 16px;
+    color: green;
+}

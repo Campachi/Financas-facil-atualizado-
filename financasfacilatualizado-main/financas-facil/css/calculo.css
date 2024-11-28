@@ -1,0 +1,301 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Reset de estilos e definição da fonte */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: #ffffff; /* Cor de fundo neutra */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333; /* Cor do texto mais escura para melhor legibilidade */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    border-bottom: 10px solid #000000; /* Adiciona borda preta na parte inferior do cabeçalho */
+    padding: 10px 0; /* Reduzido para um espaço interno menor */
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    padding: 5px 20px; /* Reduzido para um espaço interno menor */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo do width */
+}
+
+
+.logotip {
+    width: 150px;
+    height: 150px; /* Mantém a proporção da imagem */
+    margin-top: 2%;
+}
+ .tit_senha
+ {
+   margin-right: 10%;
+    
+ }
+ .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-left: 25%; /* Alinha à direita */
+    margin-top: 7%;
+}
+
+.nav-links li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0;
+}
+
+.nav-links a {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333333; /* Cor escura ao passar o mouse */
+}
+
+/* Estilos para o dropdown */
+.dropdown {
+    position: relative; /* Necessário para posicionar o conteúdo do dropdown */
+}
+
+.dropbtn {
+    color: rgb(0, 255, 255); /* Cor do botão do dropdown */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000; /* Cor de fundo do dropdown */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    top: 100%; /* Posiciona o dropdown abaixo do botão */
+    left: 0;
+    width: 200px; /* Largura do dropdown */
+    z-index: 1; /* Garante que o dropdown esteja acima dos outros elementos */
+}
+
+.dropdown-content a {
+    color: #ffffff; /* Cor dos itens do dropdown */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; /* Transição suave para o fundo */
+}
+
+.dropdown-content a:hover {
+    background-color: #333333; /* Cor de fundo ao passar o mouse */
+    color: #0ffffb; /* Cor do texto ao passar o mouse */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Exibe o dropdown ao passar o mouse sobre o item */
+}
+
+/* Estilos para a busca */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 7%;
+    margin-right: 2%;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #000000; /* Cor da borda do campo de busca */
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #1c86ee; /* Cor da borda ao focar no campo de busca */
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #000000; /* Cor do botão de busca */
+    color: rgb(0, 247, 255); /* Cor do texto do botão de busca */
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    margin-left: 10px; /* Espaço entre o campo de busca e o botão */
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #333333; /* Cor de fundo ao passar o mouse */
+    color: #ffffff; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para o conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 60px 20px; /* Espaçamento vertical */
+    text-align: center;
+}
+
+.main-content h1 {
+    font-size: 48px;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold; /* Peso de fonte em negrito */
+}
+
+.main-content p {
+    font-size: 18px; /* Tamanho da fonte */
+    color: #000000;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.calculator-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.calculator-form fieldset {
+    background-color: #e3f2fd; /* Azul claro */
+    border: 3px solid #0288d1; /* Azul médio para a borda */
+    border-radius: 8px; /* Arredondamento das bordas */
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px 0; /* Margem superior e inferior */
+    font-weight: bold;
+}
+
+.calculator-form legend {
+    font-size: 24px;
+    color: #01579b; /* Azul escuro para o texto do legend */
+    font-weight: bold;
+}
+
+.calculator-form label {
+    display: block;
+    font-size: 16px;
+    color: #000000;
+    margin: 10px 0 5px;
+    font-weight: bold; /* Adiciona negrito ao texto do label */
+}
+
+.calculator-form input {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.calculator-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #0fdfff;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calculator-form button:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #048aff; /* Cor do rodapé */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px solid black; /* Linha no topo do rodapé */
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400; /* Peso de fonte regular */
+}
+
+/* Estilos para os ícones de redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espaço acima dos ícones */
+}
+
+.social-media a {
+    margin: 0 15px; /* Espaço entre os ícones */
+}
+
+.social-media img {
+    width: 40px; /* Tamanho dos ícones */
+    height: 40px; /* Altura dos ícones */
+    object-fit: cover; /* Mantém a proporção da imagem */
+    transition: transform 0.3s ease; /* Transição ao passar o mouse */
+    border-radius: 50%; /* Torna a imagem circular */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 900px) {
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        background-color: #4ea9ff; /* Cor de fundo para dispositivos móveis */
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margens laterais */
+    }
+
+    .nav-links a {
+        padding: 10px; /* Ajusta o padding para dispositivos móveis */
+    }
+
+    .main-content h1 {
+        font-size: 36px;
+    }
+
+    .main-content p {
+        font-size: 18px;
+    }
+
+    .calculator-form {
+        padding: 20px;
+    }
+}

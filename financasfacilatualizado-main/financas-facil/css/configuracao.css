@@ -1,0 +1,292 @@
+/* Importação da fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Reset de estilos e definição da fonte */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Estilos gerais do corpo */
+body {
+    background-color: #ffffff; /* Cor de fundo neutra */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    color: #333; /* Cor do texto mais escura para melhor legibilidade */
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    border-bottom: 10px solid #000000; /* Adiciona borda preta na parte inferior do cabeçalho */
+    padding: 10px 0; /* Reduzido para um espaço interno menor */
+}
+
+/* Estilos para a barra de navegação */
+.navbar {
+    background-color: #2a9fff; /* Cor vibrante para o cabeçalho */
+    padding: 5px 20px; /* Reduzido para um espaço interno menor */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo do width */
+}
+
+
+.logotip {
+    width: 150px;
+    height: 150px; /* Mantém a proporção da imagem */
+    margin-top: 2%;
+}
+ .tit_senha
+ {
+   margin-right: 10%;
+    
+ }
+ .nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #000000;
+    border-radius: 5px;
+    margin-left: 25%; /* Alinha à direita */
+    margin-top: 7%;
+}
+
+.nav-links li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0;
+}
+
+.nav-links a {
+    color: rgb(0, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #333333; /* Cor escura ao passar o mouse */
+}
+
+/* Estilos para o dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000; /* Cor de fundo do dropdown */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    top: 100%; /* Posiciona o dropdown abaixo do item do menu */
+    left: 0;
+    padding: 10px;
+    width: 200px;
+    z-index: 1; /* Garante que o dropdown esteja acima dos outros elementos */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ffffff; /* Cor dos itens do dropdown */
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #333333; /* Cor de fundo ao passar o mouse */
+    color: #0ffffb;
+}
+
+.search-container {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: 2%;
+}
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border: 1px solid #000000; /* Azul mais claro para o campo de busca */
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+    border-color: #1c86ee; /* Azul mais escuro ao focar no campo */
+}
+
+.search-container button {
+    padding: 8px 15px;
+    border: none;
+    background-color: #000000; /* Azul para o botão de busca */
+    color: rgb(0, 247, 255);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #333333; /* Escuro ao passar o mouse */
+    color: #ffffff;
+}
+
+/* Estilos para o conteúdo principal */
+.settings-page {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.settings-info {
+    margin-bottom: 30px;
+    font-size: 1.1em; /* Tamanho da fonte maior para mais legibilidade */
+    line-height: 1.8; /* Altura da linha para melhor leitura */
+    color: #000000; /* Cor do texto das informações */
+    background-color: #f5f5f5; /* Fundo claro para informações */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+}
+
+.settings-actions {
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #1e90ff; /* Azul para o botão de ação */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.button:hover {
+    background-color: #187bcd; /* Azul mais escuro para o botão de ação */
+}
+
+.delete-button {
+    background-color: #ff4d4d; /* Vermelho para o botão de excluir */
+}
+
+.delete-button:hover {
+    background-color: #cc0000; /* Vermelho mais escuro para o botão de excluir */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #048aff; /* Azul para o rodapé */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* Espaçamento acima do rodapé */
+    border-top: 5px solid #000000; /* Linha sutil acima do rodapé */
+    width: 100%;
+}
+
+/* Estilos para o modal de confirmação */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1; /* Fica acima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Centraliza o modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+    max-width: 500px; /* Largura máxima do modal */
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-buttons {
+    text-align: center;
+}
+
+.confirm {
+    background-color: #1e90ff; /* Azul para o botão de confirmar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.confirm:hover {
+    background-color: #187bcd; /* Azul mais escuro para o botão de confirmar */
+}
+
+.cancel {
+    background-color: #ff4d4d; /* Vermelho para o botão de cancelar */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.cancel:hover {
+    background-color: #cc0000; /* Vermelho mais escuro para o botão de cancelar */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Espaço acima dos ícones */
+    margin-bottom: 50%;
+}
+
+.social-media a {
+    margin: 0 15px; /* Espaço entre os ícones, maior para uma melhor visualização */
+}
+
+.social-media img {
+    width: 40px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: 40px; /* Ajusta a altura para manter a proporção */
+    object-fit: cover; /* Garante que a imagem cubra o espaço sem distorção */
+    transition: transform 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+.social-media img:hover {
+    transform: scale(1.1); /* Aumenta o ícone levemente ao passar o mouse */
+}
